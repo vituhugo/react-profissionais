@@ -10,21 +10,25 @@ export default class App extends React.Component {
         this.state = {
             profissionais: [
                 {
+                    id: 1,
                     nome: "Wagner Venceslau",
                     github: "http://github.io/wagven"
                 },
                 {
+                    id: 2,
                     nome: "Eduardo Rocha",
                     github: "http://github.io/eduroc"
                 }
             ]
         }
     }
+
     render() {
+        console.log("STATE: ", this.state);
         return (
             <div>
                 <h1>Hello Word!</h1>
-                <TableProfissionais profissionais={this.state.profissionais}/>
+                <TableProfissionais dados={this.state.profissionais} />
                 <Form />
             </div>
         )
